@@ -109,12 +109,14 @@ function initMap() {
     var styledMap = new google.maps.StyledMapType(styles,
         {name: "Styled Map"});
 
+    var isDraggable = ($(window).width() > 460) ? true : false;
     // Create a map object, and include the MapTypeId to add
     // to the map type control.
     var mapOptions = {
         zoom: 15,
         scrollwheel: false,
-//                    disableDefaultUI: true,
+        // disableDefaultUI: true,
+        draggable: isDraggable,
         center: new google.maps.LatLng(40.445,-79.936),
         mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'map_style']
@@ -127,33 +129,3 @@ function initMap() {
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
 }
-//            var styles = [
-//                {
-//                    featureType: 'road',
-//                    elementType: 'geometry',
-//                    stylers: [
-//                        {hue: '#990000'},
-//                        {saturation: 60},
-//                        {lightness: -20}
-//                    ]
-//                }]
-//            var styledMap = new google.maps.StyledMapType(styles,
-//                    {name: "Styled Map"});
-//            function initMap() {
-//
-//                var mapDiv = document.getElementById('map');
-//                var map = new google.maps.Map(mapDiv, {
-//                    center: {lat: 40.445, lng: -79.936},
-//                    mapTypeId: 'roadmap',
-//                    zoom: 15,
-//                    scrollwheel: false,
-//                    disableDefaultUI: true,
-//                    maptypecontrol: false,
-//                    mapTypeControlOptions: {
-//                        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-//                    }
-//                });
-//            }
-//            map.mapTypes.set('map_style', styledMap);
-//            map.setMapTypeId('map_style');
-
