@@ -19,6 +19,8 @@
   /* Pick a solid background color that will be displayed while the background image is loading */
   background-color:#464646;
 }
+.ScrollSceneIndicators { z-index: 9999999 !important; }
+
 .home2 {
 
   background: linear-gradient(0deg, #f7e8d4 30%, #f7f1e4 30%);
@@ -26,6 +28,7 @@
   min-height: 100%;
   /* The Magic */
   background-size: cover; }
+
 .logo{
   display: block;
   width: 30vw;
@@ -36,8 +39,8 @@
 }
 
 #header {
-  height: 50px;
-  line-height: 50px;
+  height: 70px;
+  line-height: 70px;
   background: none;
   text-align: center;
   display: block;
@@ -47,15 +50,21 @@
   top:60%;
   font-size: 1.2em;
   border-bottom: 1px solid rgba(243, 243, 244, 0.2);
-  left: 20%;
-  right: 20%;
+  left: 10%;
+  right: 10%;
+  font-weight: 200;
+
+  /*padding-bottom: 20px;*/
+}
+
+.header2 {
+  top: 30% !important;
   /*padding-bottom: 20px;*/
 }
 
 #header a{
   height: 78px;
   line-height: 78px;
-  color: #f3f3f4;
   padding-left: 15px;
   padding-right: 15px;
   text-decoration: none;
@@ -68,9 +77,15 @@
     text-decoration: none;
   }
 }
-
+.light{
+  color: #f3f3f4;
+}
+.dark{
+  color: midnightblue;
+}
 
 #header a.active{
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(243, 243, 244, 0.5);
 }
 

@@ -13,10 +13,10 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="scss/unger.css">
         <link rel="stylesheet" href="css/normalize.css">
-
-        <!--<link rel="stylesheet" href="css/main.css">-->
         <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/main.js"></script>
@@ -26,20 +26,20 @@
             <!--<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
         <!--<![endif]&ndash;&gt;-->
         <section id="header">
-            <a class="active" href="/">Home</a>
-            <a href="/">Design</a>
-            <a href="/">Location</a>
-            <a href="">Amenities</a>
-            <a href="">Residences</a>
-            <a href="">Events</a>
-            <a href="" class="">Contact</a>
+            <a class="light active" href="#main">Home</a>
+            <a class="light" href="#main">Design</a>
+            <a class="light" href="#map">Location</a>
+            <a class="light" href="">Residences</a>
+            <a class="light" href="">Events</a>
+            <a class="light" href="" class="">Contact</a>
             <div class="close"></div>
         </section>
         <div class="container-fluid">
+            <div id="trigger3" class="spacer s0"></div>
             <div id="main" class="row home">
-                <img class="logo" src="img/logo_home.svg" alt="25 Unger ln">;
+                <img id="logo" class="logo" src="img/logo_home.svg" alt="25 Unger ln">;
             </div>
-            <div class ="row  home2">
+            <div id="second" class ="row  home2">
                 <img class="house" src="img/house.svg" alt="25 Unger ln">
                 <h1 class="house-title">1952 &amp; 2016</h1>
                 <div class="paragraph">
@@ -53,11 +53,10 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd2C7m8U4ayFsQHFBamNPNmP1Y-ZeTVYY&callback=initMap">
         </script>
-
+        <script src="js/after.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
